@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Karriepalooza surprise birthday invitation for August 7, 2026 at Green Bench Brewery."
+    />
+    <meta property="og:title" content="Karriepalooza" />
+    <meta
+      property="og:description"
+      content="A surprise 70th birthday celebration with light apps and live music."
+    />
+    <meta property="og:type" content="website" />
+    <title>Karriepalooza | Surprise Birthday Invitation</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#rsvp">Skip to RSVP</a>
+
+    <main class="poster-shell" id="top">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="mini-mark" href="#top" aria-label="Karriepalooza home">Karriepalooza</a>
+        <nav>
+          <a href="#party">The Party</a>
+          <a href="#rsvp">RSVP</a>
+          <a href="#stories">Story Board</a>
+          <a href="#location">Location</a>
+          <a href="#stay">Stay</a>
+          <a href="#travel">Travel</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="party" aria-labelledby="hero-title">
+        <img
+          class="hero-art"
+          src="assets/karriepalooza-hero.png"
+          alt="Retro poster illustration of palm trees, live music, appetizers, a silver car, and a sunset skyline."
+        />
+        <div class="hero-content">
+          <p class="secret-note">Surprise party. Please keep it under wraps.</p>
+          <h1 id="hero-title" class="wordmark">Karriepalooza</h1>
+          <p class="surprise-line">It&rsquo;s a Surprise!</p>
+          <p class="hero-copy">
+            Join us as we celebrate Karrie&rsquo;s 70th birthday with light apps,
+            live music, and a whole lot of stories.
+          </p>
+
+          <div class="event-grid" aria-label="Event details">
+            <div class="event-detail">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 2v3M17 2v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                </svg>
+              </span>
+              <span>August 7, 2026</span>
+            </div>
+            <div class="event-detail">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </span>
+              <span>4:00 &ndash; 7:00 PM</span>
+            </div>
+            <div class="event-detail">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s7-5.3 7-12A7 7 0 0 0 5 9c0 6.7 7 12 7 12Z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </span>
+              <span>Green Bench Brewery</span>
+            </div>
+            <div class="event-detail">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 3v18M8 3v18M4 8h4M16 3v7a4 4 0 0 0 4 4V3" />
+                </svg>
+              </span>
+              <span>Light Apps</span>
+            </div>
+            <div class="event-detail">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m9 18 9-9 3 3-9 9H9v-3Z" />
+                  <path d="M15 6 9 12M6 15l-3 3M18 9l3-3" />
+                </svg>
+              </span>
+              <span>Live Music</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#rsvp">
+              <span aria-hidden="true">★</span>
+              RSVP Now
+              <span aria-hidden="true">★</span>
+            </a>
+            <a class="button secondary" href="#location">View Map</a>
+          </div>
+        </div>
+        <aside class="years-stamp" aria-label="70 years and counting">
+          <strong>70</strong>
+          <span>Years &amp;<br />Counting</span>
+        </aside>
+      </section>
+
+      <section class="rsvp-band" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="section-heading">
+          <span aria-hidden="true">★</span>
+          <h2 id="rsvp-title">Let Us Know You&rsquo;re Coming</h2>
+          <span aria-hidden="true">★</span>
+        </div>
+
+        <div class="rsvp-layout">
+          <form
+            class="rsvp-form"
+            id="rsvpForm"
+            action="#"
+            data-recipient="a3lsZUBrbGVtdGVrLmNvbQ=="
+            method="POST"
+            target="rsvpSink"
+          >
+            <input type="hidden" name="_subject" value="KarriePalooza RSVP" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
+
+            <label for="guestName">Name</label>
+            <input id="guestName" name="Name" type="text" placeholder="Your full name" required />
+
+            <label for="guestCount">Total guests attending <span>(including you)</span></label>
+            <input
+              id="guestCount"
+              name="Total guests attending"
+              type="number"
+              min="1"
+              max="20"
+              placeholder="Number of guests"
+              required
+            />
+
+            <label for="funnyStory">Funny Story to post</label>
+            <textarea
+              id="funnyStory"
+              name="Funny Story to post"
+              rows="5"
+              placeholder="Share a funny story, memory, or moment about Karrie."
+              required
+            ></textarea>
+
+            <fieldset class="shirt-fieldset">
+              <legend>Would you like a T-shirt?</legend>
+              <p>Cost is approx. $25. We&rsquo;ll confirm final pricing before ordering.</p>
+              <div class="radio-group" role="radiogroup" aria-label="Would you like a T-shirt?">
+                <label>
+                  <input type="radio" name="T-shirt requested" value="Yes" />
+                  <span>Yes</span>
+                </label>
+                <label>
+                  <input type="radio" name="T-shirt requested" value="No" checked />
+                  <span>No</span>
+                </label>
+              </div>
+
+              <label class="shirt-size-label" for="shirtSize">T-shirt size</label>
+              <select id="shirtSize" name="T-shirt size" disabled>
+                <option value="">Select size</option>
+                <option value="Men's S">Men&rsquo;s S</option>
+                <option value="Men's M">Men&rsquo;s M</option>
+                <option value="Men's L">Men&rsquo;s L</option>
+                <option value="Men's XL">Men&rsquo;s XL</option>
+                <option value="Women's S">Women&rsquo;s S</option>
+                <option value="Women's M">Women&rsquo;s M</option>
+                <option value="Women's L">Women&rsquo;s L</option>
+                <option value="Women's XL">Women&rsquo;s XL</option>
+              </select>
+            </fieldset>
+
+            <label for="questions">Questions or notes</label>
+            <textarea
+              id="questions"
+              name="Questions or notes"
+              rows="3"
+              placeholder="Anything Kyle should know?"
+            ></textarea>
+
+            <button class="button primary full" type="submit">Submit RSVP</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="question-panel" aria-label="Questions">
+            <div class="mail-icon" aria-hidden="true">
+              <svg viewBox="0 0 120 90">
+                <path d="M10 18h100v60H10z" />
+                <path d="m10 20 50 36 50-36M10 78l36-30M110 78 74 48" />
+                <path class="heart" d="M60 61s-16-9-16-21c0-7 5-12 11-12 3 0 5 1 7 4 2-3 4-4 7-4 6 0 11 5 11 12 0 12-20 21-20 21Z" />
+              </svg>
+            </div>
+            <h3>Questions?</h3>
+            <p>
+              Add a note with your RSVP and it will go straight to the host
+              with <strong>KarriePalooza</strong> in the subject line.
+            </p>
+          </div>
+        </div>
+        <iframe class="hidden-frame" name="rsvpSink" title="RSVP form submission"></iframe>
+      </section>
+
+      <section class="story-section" id="stories" aria-labelledby="story-title">
+        <div class="story-intro">
+          <h2 id="story-title">Share a Story. Make It Legendary.</h2>
+          <p>
+            Funny stories submitted with RSVPs are tucked behind this private board
+            for guests to enjoy.
+          </p>
+          <div class="lock-note">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="10" width="16" height="11" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+              </svg>
+            </span>
+            Password protected
+          </div>
+        </div>
+
+          <div class="board-panel" aria-live="polite">
+          <form class="unlock-form" id="unlockForm">
+            <label for="storyPassword">Story Board</label>
+            <div class="password-row">
+              <input
+                id="storyPassword"
+                name="storyPassword"
+                type="password"
+                placeholder="Enter password"
+                autocomplete="current-password"
+              />
+              <button class="button secondary" type="submit">Unlock</button>
+            </div>
+            <p id="unlockStatus" class="unlock-status" role="status"></p>
+          </form>
+
+          <div class="story-board locked" id="storyBoard" aria-label="Story board">
+            <article class="story-card">
+              <p>&ldquo;The time Karrie tried to parallel park a boat still deserves its own documentary.&rdquo;</p>
+              <span>&mdash; Jen</span>
+            </article>
+            <article class="story-card">
+              <p>&ldquo;Remember that dance move at weddings? Iconic. Absolutely iconic.&rdquo;</p>
+              <span>&mdash; Mike</span>
+            </article>
+            <article class="story-card">
+              <p>&ldquo;Karrie&rsquo;s one-liners could fill a book. Here&rsquo;s one for the history books.&rdquo;</p>
+              <span>&mdash; Sarah</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location-section" id="location" aria-labelledby="location-title">
+        <div class="location-copy">
+          <div class="section-heading left">
+            <span aria-hidden="true">★</span>
+            <h2 id="location-title">The Party Location</h2>
+          </div>
+          <p class="script-place">Green Bench Brewery</p>
+          <address>
+            1133 Baum Ave N<br />
+            St. Petersburg, FL 33705
+          </address>
+          <p>
+            We&rsquo;ll be celebrating at this local St. Pete favorite with good
+            drinks, light apps, live music, and prime story-swapping conditions.
+          </p>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Map to Green Bench Brewery"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.240246848561!2d-82.6532589246174!3d27.771570676145828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e22a3b9a8b5f%3A0x3e16cbbb2b528ccc!2sGreen%20Bench!5e0!3m2!1sen!2sus!4v1779970126204!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="eager"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="stay-section" id="stay" aria-labelledby="stay-title">
+        <div class="section-heading">
+          <span aria-hidden="true">★</span>
+          <h2 id="stay-title">Places to Stay</h2>
+          <span aria-hidden="true">★</span>
+        </div>
+        <div class="hotel-grid">
+          <article class="hotel-card">
+            <h3>Moxy St. Petersburg Downtown</h3>
+            <p>Downtown stay with a playful, modern feel.</p>
+            <a
+              class="button secondary light"
+              href="https://www.marriott.com/en-us/hotels/tpasx-moxy-st-petersburg-downtown/overview/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Hotel
+            </a>
+          </article>
+          <article class="hotel-card">
+            <h3>The Hollander Hotel</h3>
+            <p>Historic St. Pete character close to the action.</p>
+            <a class="button secondary light" href="https://hollanderhotel.com/" target="_blank" rel="noreferrer">
+              View Hotel
+            </a>
+          </article>
+          <article class="hotel-card">
+            <h3>The Vinoy Resort &amp; Golf Club</h3>
+            <p>Classic waterfront resort with landmark style.</p>
+            <a
+              class="button secondary light"
+              href="https://www.marriott.com/en-us/hotels/tpapk-the-vinoy-resort-and-golf-club-autograph-collection/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Hotel
+            </a>
+          </article>
+          <article class="hotel-card">
+            <h3>Hilton St. Petersburg Bayfront</h3>
+            <p>Bayfront access with easy downtown travel.</p>
+            <a
+              class="button secondary light"
+              href="https://www.hilton.com/en/hotels/sptshhf-hilton-st-petersburg-bayfront/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Hotel
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="travel-section" id="travel" aria-labelledby="travel-title">
+        <div class="section-heading">
+          <span aria-hidden="true">★</span>
+          <h2 id="travel-title">Getting Here</h2>
+          <span aria-hidden="true">★</span>
+        </div>
+        <div class="airport-grid">
+          <article>
+            <span class="plane-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 11 21 3l-8 18-2-8-8-2Z" />
+                <path d="m11 13 10-10" />
+              </svg>
+            </span>
+            <h3>Tampa International Airport (TPA)</h3>
+            <p>Approx. 20&ndash;25 minutes to Green Bench.</p>
+          </article>
+          <article>
+            <span class="plane-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 11 21 3l-8 18-2-8-8-2Z" />
+                <path d="m11 13 10-10" />
+              </svg>
+            </span>
+            <h3>St. Pete-Clearwater International (PIE)</h3>
+            <p>Approx. 25&ndash;30 minutes to Green Bench.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <div class="section-heading left">
+            <span aria-hidden="true">★</span>
+            <h2 id="contact-title">Contact Us</h2>
+          </div>
+          <p>
+            Have a question about the surprise, the location, hotels, or the T-shirts?
+            Send it here and it will go straight to the host.
+          </p>
+        </div>
+
+        <form
+          class="contact-form"
+          id="contactForm"
+          action="#"
+          data-recipient="a3lsZUBrbGVtdGVrLmNvbQ=="
+          method="POST"
+          target="contactSink"
+        >
+          <input type="hidden" name="_subject" value="KarriePalooza Question" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
+
+          <label for="contactName">Name</label>
+          <input id="contactName" name="Name" type="text" placeholder="Your name" required />
+
+          <label for="contactReply">Reply email</label>
+          <input id="contactReply" name="Reply email" type="email" placeholder="Where should we reply?" required />
+
+          <label for="contactMessage">Question</label>
+          <textarea
+            id="contactMessage"
+            name="Question"
+            rows="4"
+            placeholder="Ask away."
+            required
+          ></textarea>
+
+          <button class="button primary full" type="submit">Send Question</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+        <iframe class="hidden-frame" name="contactSink" title="Contact form submission"></iframe>
+      </section>
+
+      <footer class="site-footer">
+        <p>Limited tickets available. Keep the surprise alive.</p>
+        <a href="#top">Back to top</a>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
