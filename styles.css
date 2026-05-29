@@ -882,9 +882,10 @@ address {
 
 .hotel-card {
   display: grid;
-  min-height: 224px;
-  align-content: start;
-  gap: 0.8rem;
+  grid-template-rows: auto auto 1fr auto auto;
+  min-height: 314px;
+  align-content: stretch;
+  gap: 0.72rem;
   padding: 1rem;
   border-right: 2px solid rgba(255, 247, 228, 0.72);
 }
@@ -908,10 +909,48 @@ address {
   line-height: 1.5;
 }
 
+.hotel-address {
+  margin: 0;
+  color: rgba(255, 247, 228, 0.92);
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.hotel-address span {
+  display: block;
+  margin-top: 0.38rem;
+  color: var(--gold);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .hotel-card .button {
   align-self: end;
   width: 100%;
-  margin-top: auto;
+  margin-top: 0.35rem;
+}
+
+.hotel-text-link {
+  display: inline-block;
+  color: var(--cream);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+}
+
+.hotel-text-link:hover,
+.hotel-text-link:focus-visible {
+  color: var(--gold);
 }
 
 .travel-section {
