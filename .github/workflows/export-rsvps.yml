@@ -1,0 +1,42 @@
+name: Export RSVPs from FormSubmit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export-rsvps
+  cancel-in-progress: false
+
+jobs:
+  export-rsvps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Export RSVPs
+        run: node scripts/export-rsvps.mjs
+        env:
+          FORMSUBMIT_API_KEY: ${{ secrets.FORMSUBMIT_API_KEY }}
+
+      - name: Commit exported RSVPs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/rsvps.json data/rsvps.csv; then
+            echo "No RSVP export changes."
+            exit 0
+          fi
+          git add data/rsvps.json data/rsvps.csv
+          git commit -m "Export RSVP database"
+          git push

@@ -509,13 +509,15 @@ textarea {
 .radio-group label {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   min-height: 46px;
   padding: 0.62rem 0.75rem;
   color: var(--ink);
   background: var(--cream);
-  border: 2px solid rgba(36, 27, 25, 0.72);
+  border: 3px solid var(--cream);
   border-radius: 6px;
+  box-shadow: inset 0 0 0 2px var(--red), 3px 3px 0 rgba(36, 27, 25, 0.42);
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
@@ -527,14 +529,14 @@ textarea {
 }
 
 .rsvp-form .radio-group input {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   accent-color: var(--red);
 }
 
 .radio-group span {
   font-family: "Oswald", Arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.22rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -616,6 +618,85 @@ textarea {
 .question-panel a:not(.button) {
   color: var(--cream);
   font-weight: 700;
+}
+
+.rsvp-list-panel {
+  margin-top: 2rem;
+  padding-top: 1.55rem;
+  border-top: 3px solid rgba(255, 247, 228, 0.8);
+}
+
+.guest-list-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.guest-list-heading h3 {
+  margin: 0;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.guest-list-heading p {
+  margin: 0;
+  color: rgba(255, 247, 228, 0.84);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.guest-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.guest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  min-height: 58px;
+  padding: 0.75rem 0.85rem;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid rgba(36, 27, 25, 0.72);
+  border-radius: 7px;
+  box-shadow: 3px 3px 0 rgba(36, 27, 25, 0.42);
+}
+
+.guest-row strong {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.guest-row span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.guest-list-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgba(255, 247, 228, 0.84);
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .story-section,
@@ -995,6 +1076,10 @@ address {
   .hotel-card:last-child {
     border-bottom: 0;
   }
+
+  .guest-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -1060,6 +1145,19 @@ address {
   .airport-grid,
   .story-board {
     grid-template-columns: 1fr;
+  }
+
+  .guest-list {
+    grid-template-columns: 1fr;
+  }
+
+  .guest-list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .guest-list-heading p {
+    text-align: left;
   }
 
   .event-detail:first-child {

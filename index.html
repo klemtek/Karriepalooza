@@ -45,8 +45,8 @@
           <h1 id="hero-title" class="wordmark">Karriepalooza</h1>
           <p class="surprise-line">It&rsquo;s a Surprise!</p>
           <p class="hero-copy">
-            Join us as we celebrate Karrie&rsquo;s 70th birthday with light apps,
-            live music, and a whole lot of stories.
+            Join us as we celebrate Karrie&rsquo;s 70th birthday with food,
+            fun and a whole lot of rock and roll.
           </p>
 
           <div class="event-grid" aria-label="Event details">
@@ -123,12 +123,14 @@
             id="rsvpForm"
             action="#"
             data-recipient="a3lsZUBrbGVtdGVrLmNvbQ=="
+            data-cc="Qm9ubmlLbGVtZW50QGdtYWlsLmNvbQ=="
             method="POST"
             target="rsvpSink"
           >
             <input type="hidden" name="_subject" value="KarriePalooza RSVP" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_cc" id="rsvpCc" value="" />
             <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
 
             <label for="guestName">Name</label>
@@ -208,6 +210,14 @@
               with <strong>KarriePalooza</strong> in the subject line.
             </p>
           </div>
+        </div>
+
+        <div class="rsvp-list-panel" aria-labelledby="guest-list-title">
+          <div class="guest-list-heading">
+            <h3 id="guest-list-title">Who&rsquo;s RSVP&rsquo;d</h3>
+            <p id="guestListSummary">Loading the guest list...</p>
+          </div>
+          <div class="guest-list" id="guestList" role="list"></div>
         </div>
         <iframe class="hidden-frame" name="rsvpSink" title="RSVP form submission"></iframe>
       </section>
