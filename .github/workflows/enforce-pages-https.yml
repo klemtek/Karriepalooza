@@ -1,0 +1,38 @@
+name: Enforce GitHub Pages HTTPS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  pages: write
+  contents: read
+
+concurrency:
+  group: enforce-pages-https
+  cancel-in-progress: false
+
+jobs:
+  enforce-https:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check and enforce HTTPS
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          current="$(gh api "repos/$REPO/pages" --jq '.https_enforced')"
+          if [ "$current" = "true" ]; then
+            echo "HTTPS is already enforced."
+            exit 0
+          fi
+
+          if gh api --method PUT "repos/$REPO/pages" --input - <<'JSON'
+          {"https_enforced":true}
+          JSON
+          then
+            echo "HTTPS enforcement enabled."
+          else
+            echo "HTTPS certificate is not ready yet. The next scheduled run will retry."
+          fi
