@@ -246,6 +246,7 @@ textarea {
   font-family: "Oswald", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -253,6 +254,37 @@ textarea {
   grid-column: span 2;
   color: var(--blue-deep);
   background: var(--cream);
+}
+
+.calendar-save {
+  position: relative;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.calendar-save:hover,
+.calendar-save:focus-visible {
+  background: #fffdf4;
+  box-shadow: 6px 6px 0 var(--ink);
+  outline: 0;
+  transform: translateY(-2px);
+}
+
+.calendar-save:active {
+  box-shadow: 3px 3px 0 rgba(36, 27, 25, 0.86);
+  transform: translateY(0);
+}
+
+.calendar-hint {
+  margin-left: auto;
+  padding: 0.28rem 0.5rem;
+  color: var(--cream);
+  background: var(--red);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 2px 2px 0 rgba(36, 27, 25, 0.78);
+  font-size: 0.74rem;
+  white-space: nowrap;
 }
 
 .detail-icon {
