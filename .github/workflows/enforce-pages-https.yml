@@ -19,9 +19,14 @@ jobs:
     steps:
       - name: Check and enforce HTTPS
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "PAGES_ADMIN_TOKEN is not set; skipping HTTPS enforcement."
+            exit 0
+          fi
+
           current="$(gh api "repos/$REPO/pages" --jq '.https_enforced')"
           if [ "$current" = "true" ]; then
             echo "HTTPS is already enforced."
