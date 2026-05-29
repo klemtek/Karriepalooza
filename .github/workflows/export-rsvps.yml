@@ -25,7 +25,12 @@ jobs:
           node-version: 20
 
       - name: Export RSVPs
-        run: node scripts/export-rsvps.mjs
+        run: |
+          if [ -z "$FORMSUBMIT_API_KEY" ]; then
+            echo "FORMSUBMIT_API_KEY is not set yet; skipping RSVP export."
+            exit 0
+          fi
+          node scripts/export-rsvps.mjs
         env:
           FORMSUBMIT_API_KEY: ${{ secrets.FORMSUBMIT_API_KEY }}
 
