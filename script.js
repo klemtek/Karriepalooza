@@ -165,7 +165,7 @@ function renderStories() {
 function unlockStories() {
   storyBoard.classList.remove("locked");
   sessionStorage.setItem("karriepalooza-board-unlocked", "true");
-  unlockStatus.textContent = "Unlocked. Enjoy the story board.";
+  unlockStatus.textContent = "Unlocked. Enjoy the guest book.";
   unlockForm.reset();
   renderStories();
 }
@@ -206,7 +206,7 @@ rsvpForm.addEventListener("submit", () => {
   routeFormToHost(rsvpForm);
 
   const name = rsvpForm.elements.Name.value.trim();
-  const story = rsvpForm.elements["Funny Story to post"].value.trim();
+  const story = rsvpForm.elements["Guest Book message"].value.trim();
   const rsvpRecord = getRsvpRecordFromForm();
 
   if (name && story) {

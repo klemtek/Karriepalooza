@@ -26,7 +26,7 @@
         <nav>
           <a href="#party">The Party</a>
           <a href="#rsvp">RSVP</a>
-          <a href="#stories">Story Board</a>
+          <a href="#stories">Guest Book</a>
           <a href="#location">Location</a>
           <a href="#stay">Stay</a>
           <a href="#travel">Travel</a>
@@ -147,12 +147,12 @@
               required
             />
 
-            <label for="funnyStory">Funny Story to post</label>
+            <label for="funnyStory">Share something</label>
             <textarea
               id="funnyStory"
-              name="Funny Story to post"
+              name="Guest Book message"
               rows="5"
-              placeholder="Share a funny story, memory, or moment about Karrie."
+              placeholder="Share a memory, note, toast, song request, joke, or anything you want Karrie to see."
               required
             ></textarea>
 
@@ -224,10 +224,10 @@
 
       <section class="story-section" id="stories" aria-labelledby="story-title">
         <div class="story-intro">
-          <h2 id="story-title">Share a Story. Make It Legendary.</h2>
+          <h2 id="story-title">Guest Book</h2>
           <p>
-            Funny stories submitted with RSVPs are tucked behind this private board
-            for guests to enjoy.
+            Messages submitted with RSVPs are tucked behind this private guest
+            book for everyone to enjoy.
           </p>
           <div class="lock-note">
             <span aria-hidden="true">
@@ -240,9 +240,9 @@
           </div>
         </div>
 
-          <div class="board-panel" aria-live="polite">
+        <div class="board-panel" aria-live="polite">
           <form class="unlock-form" id="unlockForm">
-            <label for="storyPassword">Story Board</label>
+            <label for="storyPassword">Guest Book</label>
             <div class="password-row">
               <input
                 id="storyPassword"
@@ -256,7 +256,7 @@
             <p id="unlockStatus" class="unlock-status" role="status"></p>
           </form>
 
-          <div class="story-board locked" id="storyBoard" aria-label="Story board">
+          <div class="story-board locked" id="storyBoard" aria-label="Guest book">
             <article class="story-card">
               <p>&ldquo;The time Karrie tried to parallel park a boat still deserves its own documentary.&rdquo;</p>
               <span>&mdash; Jen</span>

@@ -6,7 +6,7 @@ Static invitation site for Karriepalooza.com.
 
 - `index.html` contains the page content, RSVP form, map embed, hotels, and airport details.
 - `styles.css` contains the poster-inspired theme.
-- `script.js` controls local story-board unlock behavior and saves submitted stories in the visitor's browser.
+- `script.js` controls local guest-book unlock behavior and saves submitted messages in the visitor's browser.
 - `data/rsvps.json` powers the public RSVP list.
 - `data/rsvps.csv` is the downloadable RSVP export.
 - `.github/workflows/export-rsvps.yml` can export RSVPs from FormSubmit into the GitHub repo.
@@ -39,16 +39,16 @@ data/rsvps.json
 data/rsvps.csv
 ```
 
-## Story Board Password
+## Guest Book Password
 
-The current front-end story-board password is:
+The current front-end guest-book password is:
 
 ```text
 karrie70
 ```
 
-The story board is front-end password gated. The RSVP export intentionally
-keeps funny stories out of the public guest list.
+The guest book is front-end password gated. The RSVP export intentionally keeps
+guest-book messages out of the public guest list.
 
 ## Deploy With GitHub Pages
 
